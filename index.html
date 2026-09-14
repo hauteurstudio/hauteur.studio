@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAUTEUR STUDIO - Enregistrement, Mixage, Composition & 3D</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hauteur-brown': '#33160B',
+                        'hauteur-darkbrown': '#230E06',
+                        'hauteur-card': '#161616',
+                        'hauteur-card-hover': '#1F1F1F',
+                        'hauteur-teal': '#289795',
+                        'hauteur-gold': '#A38B3A',
+                        'hauteur-red': '#C43628',
+                    },
+                    fontFamily: {
+                        heading: ['Syne', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar matching retro theme */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #230E06;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4A2213;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #612D19;
+        }
+    </style>
+</head>
+<body class="bg-hauteur-brown text-gray-200 font-body antialiased selection:bg-orange-900 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-hauteur-brown/90 backdrop-blur-md border-b border-white/5 px-6 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Brand Logo Text -->
+            <a href="#" class="font-heading font-extrabold text-2xl tracking-wider text-white hover:opacity-80 transition">
+                HAUTEUR
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#realisations" class="hover:text-white transition">Réalisations</a>
+                <a href="#about" class="hover:text-white transition">Qui sommes-nous?</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#contact" class="hidden sm:inline-block px-5 py-2.5 rounded-full border border-gray-400 text-sm font-medium text-white hover:bg-white hover:text-black transition-all duration-300">
+                Contactez-nous
+            </a>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-200 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden pt-4 pb-2 px-2 flex flex-col space-y-3 font-medium border-t border-white/10 mt-3">
+            <a href="#services" class="mobile-link text-gray-300 hover:text-white py-1">Services</a>
+            <a href="#realisations" class="mobile-link text-gray-300 hover:text-white py-1">Réalisations</a>
+            <a href="#about" class="mobile-link text-gray-300 hover:text-white py-1">Qui sommes-nous?</a>
+            <a href="#contact" class="mobile-link text-gray-300 hover:text-white py-1">Contact</a>
+            <a href="#contact" class="mobile-link text-center px-5 py-2.5 rounded-full border border-gray-400 text-sm font-medium text-white hover:bg-white hover:text-black transition">
+                Contactez-nous
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden bg-gradient-to-b from-hauteur-brown via-hauteur-brown to-hauteur-darkbrown">
+        <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+            
+            <!-- Logo Graphic (SVG representation based on image 1) -->
+            <div class="w-64 sm:w-80 md:w-96 mb-8 transform hover:scale-105 transition duration-500">
+                <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl">
+                    <!-- Sun circle -->
+                    <circle cx="160" cy="180" r="45" fill="#D2B081" />
+                    <!-- Retro Wavy Graphic Lines -->
+                    <path d="M 130,240 C 130,170 210,130 210,110 C 210,95 195,90 180,105 C 160,125 130,200 130,240 Z" fill="#C43628" />
+                    <path d="M 130,240 L 155,240 C 155,180 230,140 230,110 L 210,110 C 210,130 130,170 130,240 Z" fill="#C43628" />
+                    
+                    <path d="M 155,240 L 205,240 C 205,170 270,130 270,110 L 250,110 C 250,130 180,170 155,240 Z" fill="#A38B3A" />
+                    
+                    <path d="M 205,240 L 255,240 C 255,170 310,130 310,110 L 290,110 C 290,130 230,170 205,240 Z" fill="#289795" />
+
+                    <!-- Custom Logo Typography -->
+                    <text x="200" y="295" text-anchor="middle" font-family="'Syne', sans-serif" font-weight="800" font-size="46" fill="#EADBC8" letter-spacing="-1">Hauteur</text>
+                    <text x="200" y="325" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="16" fill="#D2B081" letter-spacing="10">STUDIO</text>
+                </svg>
+            </div>
+
+            <p class="text-gray-300 max-w-xl text-base sm:text-lg font-medium leading-relaxed mb-8">
+                Studio de production musicale, ingénierie sonore, création visuelle & réalisations 3D sur mesure.
+            </p>
+
+            <a href="#services" class="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-gray-400 hover:text-white transition group">
+                <span>Découvrir nos services</span>
+                <svg class="w-4 h-4 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto space-y-8">
+        
+        <!-- Service Card 1 -->
+        <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
+            <div class="md:w-1/2 space-y-4">
+                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
+                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                    ENREGISTREMENT /<br>MIXAGE / MASTERING<br>
+                    <span class="text-xl sm:text-2xl text-gray-300 font-normal">25€/H</span>
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Prise de son, mixage et mastering dans un environnement professionnel, avec une attention particulière portée aux détails et à l'identité sonore de chaque projet.
+                </p>
+                <div class="pt-4">
+                    <a href="#contact" class="inline-block px-6 py-2.5 rounded-full border border-gray-600 text-sm font-medium text-gray-200 hover:border-white hover:text-white transition">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Microphone Studio" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                     onerror="this.src='https://placehold.co/600x400/222/fff?text=Enregistrement+Studio'">
+            </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
+            <div class="md:w-1/2 space-y-4">
+                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
+                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                    COMPOSITION
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Création musicale sur mesure, avec un parc de matériel analogique vintage permettant d'apporter chaleur, caractère et authenticité à vos productions.
+                </p>
+                <div class="pt-4">
+                    <a href="#contact" class="inline-block px-6 py-2.5 rounded-full border border-gray-600 text-sm font-medium text-gray-200 hover:border-white hover:text-white transition">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Console de mixage analogique" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                     onerror="this.src='https://placehold.co/600x400/222/fff?text=Console+Mixage'">
+            </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
+            <div class="md:w-1/2 space-y-4">
+                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
+                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                    VIDÉO
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Réalisation de clips et captation live, avec une approche visuelle soignée pour mettre en valeur votre projet artistique.
+                </p>
+                <div class="pt-4">
+                    <a href="#contact" class="inline-block px-6 py-2.5 rounded-full border border-gray-600 text-sm font-medium text-gray-200 hover:border-white hover:text-white transition">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Captation vidéo studio" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                     onerror="this.src='https://placehold.co/600x400/222/fff?text=Captation+Video'">
+            </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
+            <div class="md:w-1/2 space-y-4">
+                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
+                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
+                    3D
+                </h2>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    Création de visuels et d'assets 3D sur mesure, pour enrichir vos projets avec une dimension esthétique unique.
+                </p>
+                <div class="pt-4">
+                    <a href="#contact" class="inline-block px-6 py-2.5 rounded-full border border-gray-600 text-sm font-medium text-gray-200 hover:border-white hover:text-white transition">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Enceintes studio audio 3D" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                     onerror="this.src='https://placehold.co/600x400/222/fff?text=Artiste+3D'">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- NOS RÉALISATIONS SECTION -->
+    <section id="realisations" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="mb-12">
+            <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
+            <div class="flex flex-col md:flex-row justify-between md:items-end gap-6">
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
+                    NOS RÉALISATIONS
+                </h2>
+                <p class="text-gray-300 max-w-md text-sm sm:text-base leading-relaxed">
+                    Hauteur Studio est un home studio intime et professionnel conçu pour libérer votre créativité. Équipé pour répondre aux exigences de la production musicale moderne et de l'image, c'est l'endroit idéal pour concrétiser vos idées, de la maquette au produit final.
+                </p>
+            </div>
+        </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Item 1 -->
+            <div class="group cursor-pointer">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
+                    <!-- Title Banner Badge -->
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+                            ECLIPSE FEAT. ÉLISE - UNE LARME SOUS LA PLUIE -
+                        </span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop" 
+                         alt="Eclipse feat Elise" 
+                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <p class="text-xs text-gray-400">Enregistrement Live, Mixage, Mastering</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="group cursor-pointer">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+                            M4TIAS - IRON MAN
+                        </span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" 
+                         alt="M4tias Iron Man 3D" 
+                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <p class="text-xs text-gray-400">Composition, Enregistrement, Mixage, Mastering, Réalisation du clip en 3D</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="group cursor-pointer">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+                            ZEN - VIVRE
+                        </span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop" 
+                         alt="Zen Vivre" 
+                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <p class="text-xs text-gray-400">Réalisation Clip</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="group cursor-pointer">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+                            MARTY DE LUTECE - TOUT CE QUE J'AI PAS
+                        </span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
+                         alt="Marty de Lutece" 
+                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <p class="text-xs text-gray-400">Composition, Enregistrement, Mixage</p>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="group cursor-pointer">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+                            BOURRICOT - LIVE SESSION
+                        </span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop" 
+                         alt="Bourricot Live Session" 
+                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <p class="text-xs text-gray-400">Captation Live</p>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="group cursor-pointer">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+                            LA KRYPTE AU MIC #3
+                        </span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop" 
+                         alt="La Krypte au Mic" 
+                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <p class="text-xs text-gray-400">Captation Live</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- QUI SOMMES-NOUS? SECTION -->
+    <section id="about" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <div class="w-12 h-1 bg-gray-400 rounded-full mx-auto mb-6"></div>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
+                QUI SOMMES-NOUS?
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            
+            <!-- Left 2 Points -->
+            <div class="space-y-12 text-center lg:text-right order-2 lg:order-1">
+                <div class="space-y-2">
+                    <span class="font-heading font-extrabold text-6xl text-white/10 block">1</span>
+                    <h3 class="font-heading font-extrabold text-2xl text-white uppercase tracking-wide">VISION</h3>
+                    <p class="text-gray-400 text-sm max-w-xs mx-auto lg:ml-auto lg:mr-0">
+                        Une direction artistique forte pour des projets uniques et mémorables, en accord avec votre identité.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="font-heading font-extrabold text-6xl text-white/10 block">3</span>
+                    <h3 class="font-heading font-extrabold text-2xl text-white uppercase tracking-wide">ANALOG</h3>
+                    <p class="text-gray-400 text-sm max-w-xs mx-auto lg:ml-auto lg:mr-0">
+                        Un son chaleureux et organique grâce à l'utilisation de matériel analogique vintage.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Center Image Portrait -->
+            <div class="order-1 lg:order-2 flex justify-center">
+                <div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative group">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800&auto=format&fit=crop" 
+                         alt="Ingénieur Son & Artiste Hauteur Studio" 
+                         class="w-full h-[450px] object-cover group-hover:scale-105 transition duration-500 filter contrast-105">
+                </div>
+            </div>
+
+            <!-- Right 2 Points -->
+            <div class="space-y-12 text-center lg:text-left order-3">
+                <div class="space-y-2">
+                    <span class="font-heading font-extrabold text-6xl text-white/10 block">2</span>
+                    <h3 class="font-heading font-extrabold text-2xl text-white uppercase tracking-wide">FUSION</h3>
+                    <p class="text-gray-400 text-sm max-w-xs mx-auto lg:mr-auto lg:ml-0">
+                        Un studio qui combine son, image et 3D pour une approche globale et cohérente.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <span class="font-heading font-extrabold text-6xl text-white/10 block">4</span>
+                    <h3 class="font-heading font-extrabold text-2xl text-white uppercase tracking-wide">PRECISION</h3>
+                    <p class="text-gray-400 text-sm max-w-xs mx-auto lg:mr-auto lg:ml-0">
+                        Un accompagnement sur mesure à chaque étape, du concept initial jusqu'au rendu final.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH GRADIENT BACKGROUND -->
+    <section id="contact" class="pt-20 pb-28 px-4 sm:px-6 relative bg-gradient-to-b from-hauteur-brown via-hauteur-darkbrown to-black">
+        <div class="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <!-- Social Icons Pill -->
+            <div class="flex justify-center space-x-3 mb-2">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.31 1.56-1.28 2.55.02.82.42 1.61 1.08 2.1 1.03.79 2.52.82 3.59.07.71-.5 1.18-1.29 1.25-2.16.08-2.92.03-5.83.04-8.74 0-2.49.01-4.99-.01-7.48z"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
+                CONTACTEZ-NOUS
+            </h2>
+
+            <p class="text-gray-300 text-sm sm:text-base max-w-lg mx-auto">
+                Pour toute question, projet ou collaboration, n'hésitez pas à nous écrire. Nous vous répondrons rapidement pour discuter de votre idée et trouver la meilleure manière de la concrétiser.
+            </p>
+
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-300 pt-2 font-medium">
+                <a href="mailto:info@example.com" class="flex items-center space-x-2 hover:text-white transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>info@example.com</span>
+                </a>
+                <a href="tel:5551234567" class="flex items-center space-x-2 hover:text-white transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>(555) 123-4567</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Form Card Container -->
+        <div class="max-w-xl mx-auto bg-[#181818] rounded-2xl p-6 sm:p-10 border border-white/5 shadow-2xl">
+            <form id="contactForm" class="space-y-5">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Nom</label>
+                    <input type="text" required placeholder="Jane Smith" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Email</label>
+                    <input type="email" required placeholder="info@example.com" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Sujet</label>
+                    <input type="text" required placeholder="Session enregistrement" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Message</label>
+                    <textarea rows="4" required placeholder="Écrivez votre message" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-white text-black font-semibold rounded-full py-3 hover:bg-gray-200 transition duration-300 shadow-md">
+                    Envoyer
+                </button>
+            </form>
+
+            <!-- Success Feedback Toast -->
+            <div id="formFeedback" class="hidden mt-4 p-4 rounded-lg bg-green-900/40 border border-green-500 text-green-200 text-sm text-center">
+                Merci ! Votre message a bien été envoyé. Nous vous répondrons très rapidement.
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div>
+                <a href="#" class="font-heading font-extrabold text-xl tracking-wider text-white">
+                    HAUTEUR
+                </a>
+                <p class="text-xs text-gray-500 mt-2">© 2026 Hauteur Studio. Tous droits réservés.</p>
+            </div>
+
+            <div class="flex flex-wrap gap-12 text-xs">
+                <div>
+                    <span class="block text-white font-semibold mb-3 uppercase tracking-wider">Navigation</span>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="hover:text-white transition">Qui sommes-nous?</a></li>
+                        <li><a href="#realisations" class="hover:text-white transition">Réalisations</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span class="block text-white font-semibold mb-3 uppercase tracking-wider">Socials</span>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handling Simulation
+        const contactForm = document.getElementById('contactForm');
+        const formFeedback = document.getElementById('formFeedback');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formFeedback.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formFeedback.classList.add('hidden');
+            }, 6000);
+        });
+    </script>
+</body>
+</html>
