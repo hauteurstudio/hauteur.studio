@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAUTEUR STUDIO - Enregistrement, Mixage, Composition & 3D</title>
+    <meta name="description" content="Studio de production musicale, ingénierie sonore, création visuelle & réalisations 3D sur mesure.">
+    <meta property="og:title" content="HAUTEUR STUDIO - Enregistrement, Mixage, Composition & 3D">
+    <meta property="og:description" content="Studio de production musicale, ingénierie sonore, création visuelle & réalisations 3D sur mesure.">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/hauteurstudio/hauteur.studio/main/image/Hauteur_Studio_transparent.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/hauteurstudio/hauteur.studio/main/image/Hauteur_Studio_transparent.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -17,12 +22,14 @@
                         'hauteur-darkbrown': '#230E06',
                         'hauteur-card': '#161616',
                         'hauteur-card-hover': '#1F1F1F',
-                        'hauteur-teal': '#289795',
-                        'hauteur-gold': '#A38B3A',
-                        'hauteur-red': '#C43628',
+                        'hauteur-teal': '#2A838E',
+                        'hauteur-gold': '#8C7733',
+                        'hauteur-red': '#BA2B23',
+                        'hauteur-sand': '#C7B59D',
                     },
                     fontFamily: {
-                        heading: ['Syne', 'sans-serif'],
+                        logo: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'Plus Jakarta Sans', 'sans-serif'],
                         body: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
@@ -51,9 +58,13 @@
     <!-- NAVIGATION BAR -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-hauteur-brown/90 backdrop-blur-md border-b border-white/5 px-6 py-4 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- Brand Logo Text -->
-            <a href="#" class="font-heading font-extrabold text-2xl tracking-wider text-white hover:opacity-80 transition">
-                HAUTEUR
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group" id="brand-header-logo">
+                <img src="https://raw.githubusercontent.com/hauteurstudio/hauteur.studio/main/image/Hauteur_Studio_transparent.png" 
+                     onerror="this.onerror=null;this.src='/image/Hauteur_Studio_transparent.png';" 
+                     alt="Hauteur Studio Logo" 
+                     class="w-9 h-9 object-contain group-hover:scale-105 transition duration-300">
+                <span class="font-heading font-extrabold text-2xl tracking-wider text-white group-hover:opacity-90 transition">HAUTEUR</span>
             </a>
 
             <!-- Desktop Nav Links -->
@@ -61,13 +72,17 @@
                 <a href="#services" class="hover:text-white transition">Services</a>
                 <a href="#realisations" class="hover:text-white transition">Réalisations</a>
                 <a href="#about" class="hover:text-white transition">Qui sommes-nous?</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
             </nav>
 
-            <!-- CTA Button -->
-            <a href="#contact" class="hidden sm:inline-block px-5 py-2.5 rounded-full border border-gray-400 text-sm font-medium text-white hover:bg-white hover:text-black transition-all duration-300">
-                Contactez-nous
-            </a>
+            <!-- Instagram & CTA Button -->
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="https://www.instagram.com/hauteur.studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram Hauteur Studio" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#BA2B23] text-gray-200 hover:text-white flex items-center justify-center transition duration-200" title="@hauteur.studio sur Instagram">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full border border-gray-400 text-sm font-medium text-white hover:bg-white hover:text-black transition-all duration-300">
+                    Contactez-nous
+                </a>
+            </div>
 
             <!-- Mobile Hamburger Toggle -->
             <button id="mobile-menu-btn" class="md:hidden text-gray-200 hover:text-white focus:outline-none">
@@ -82,7 +97,10 @@
             <a href="#services" class="mobile-link text-gray-300 hover:text-white py-1">Services</a>
             <a href="#realisations" class="mobile-link text-gray-300 hover:text-white py-1">Réalisations</a>
             <a href="#about" class="mobile-link text-gray-300 hover:text-white py-1">Qui sommes-nous?</a>
-            <a href="#contact" class="mobile-link text-gray-300 hover:text-white py-1">Contact</a>
+            <a href="https://www.instagram.com/hauteur.studio" target="_blank" rel="noopener noreferrer" class="mobile-link text-[#C7B59D] hover:text-white py-1 flex items-center gap-2">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <span>Instagram @hauteur.studio</span>
+            </a>
             <a href="#contact" class="mobile-link text-center px-5 py-2.5 rounded-full border border-gray-400 text-sm font-medium text-white hover:bg-white hover:text-black transition">
                 Contactez-nous
             </a>
@@ -91,28 +109,18 @@
 
     <!-- HERO SECTION -->
     <section class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden bg-gradient-to-b from-hauteur-brown via-hauteur-brown to-hauteur-darkbrown">
-        <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+        <div class="max-w-5xl mx-auto text-center flex flex-col items-center">
             
-            <!-- Logo Graphic (SVG representation based on image 1) -->
-            <div class="w-64 sm:w-80 md:w-96 mb-8 transform hover:scale-105 transition duration-500">
-                <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-2xl">
-                    <!-- Sun circle -->
-                    <circle cx="160" cy="180" r="45" fill="#D2B081" />
-                    <!-- Retro Wavy Graphic Lines -->
-                    <path d="M 130,240 C 130,170 210,130 210,110 C 210,95 195,90 180,105 C 160,125 130,200 130,240 Z" fill="#C43628" />
-                    <path d="M 130,240 L 155,240 C 155,180 230,140 230,110 L 210,110 C 210,130 130,170 130,240 Z" fill="#C43628" />
-                    
-                    <path d="M 155,240 L 205,240 C 205,170 270,130 270,110 L 250,110 C 250,130 180,170 155,240 Z" fill="#A38B3A" />
-                    
-                    <path d="M 205,240 L 255,240 C 255,170 310,130 310,110 L 290,110 C 290,130 230,170 205,240 Z" fill="#289795" />
-
-                    <!-- Custom Logo Typography -->
-                    <text x="200" y="295" text-anchor="middle" font-family="'Syne', sans-serif" font-weight="800" font-size="46" fill="#EADBC8" letter-spacing="-1">Hauteur</text>
-                    <text x="200" y="325" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="16" fill="#D2B081" letter-spacing="10">STUDIO</text>
-                </svg>
+            <!-- Main Hero Logo (Hauteur Studio Brand Identity - 2x size) -->
+            <div class="w-full max-w-[480px] sm:max-w-[640px] md:max-w-[800px] mb-10 transform hover:scale-105 transition duration-500" id="main-hero-logo">
+                <img src="https://raw.githubusercontent.com/hauteurstudio/hauteur.studio/main/image/Hauteur_Studio_transparent.png" 
+                     onerror="this.onerror=null;this.src='/image/Hauteur_Studio_transparent.png';" 
+                     alt="Hauteur Studio - Logo Principal" 
+                     class="w-full h-auto object-contain drop-shadow-2xl"
+                     loading="eager">
             </div>
 
-            <p class="text-gray-300 max-w-xl text-base sm:text-lg font-medium leading-relaxed mb-8">
+            <p class="text-gray-300 max-w-2xl text-base sm:text-xl font-medium leading-relaxed mb-8">
                 Studio de production musicale, ingénierie sonore, création visuelle & réalisations 3D sur mesure.
             </p>
 
@@ -128,22 +136,31 @@
         
         <!-- Service Card 1 -->
         <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
-            <div class="md:w-1/2 space-y-4">
-                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
-                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
-                    ENREGISTREMENT /<br>MIXAGE / MASTERING<br>
-                    <span class="text-xl sm:text-2xl text-gray-300 font-normal">25€/H</span>
-                </h2>
+            <div class="md:w-1/2 w-full space-y-4 min-w-0">
+                <div class="w-12 h-1 bg-[#BA2B23] rounded-full mb-6"></div>
+                <div class="space-y-2">
+                    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-white leading-tight tracking-tight">
+                        ENREGISTREMENT /<br class="hidden sm:inline"> MIXAGE / MASTERING
+                    </h2>
+                    <div class="text-xl sm:text-2xl text-[#C7B59D] font-medium flex items-center gap-3">
+                        <span>Dès 50€</span>
+                        <span class="text-xs font-normal text-gray-400 bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10">Sessions & packs</span>
+                    </div>
+                </div>
                 <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
                     Prise de son, mixage et mastering dans un environnement professionnel, avec une attention particulière portée aux détails et à l'identité sonore de chaque projet.
                 </p>
-                <div class="pt-4">
+                <div class="pt-4 flex flex-wrap items-center gap-3">
+                    <button type="button" id="open-tarifs-btn" class="inline-flex items-center space-x-2 px-6 py-2.5 rounded-full bg-[#BA2B23] hover:bg-[#a1241d] text-white text-sm font-semibold transition duration-300 shadow-lg group cursor-pointer" aria-haspopup="dialog" aria-controls="tarifs-modal">
+                        <svg class="w-4 h-4 text-white/90 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+                        <span>Tarifs</span>
+                    </button>
                     <a href="#contact" class="inline-block px-6 py-2.5 rounded-full border border-gray-600 text-sm font-medium text-gray-200 hover:border-white hover:text-white transition">
                         Me contacter
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group shrink-0">
                 <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop" 
                      alt="Microphone Studio" 
                      class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
@@ -153,11 +170,16 @@
 
         <!-- Service Card 2 -->
         <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
-            <div class="md:w-1/2 space-y-4">
-                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
-                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
-                    COMPOSITION
-                </h2>
+            <div class="md:w-1/2 w-full space-y-4 min-w-0">
+                <div class="w-12 h-1 bg-[#8C7733] rounded-full mb-6"></div>
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-white leading-tight tracking-tight">
+                        COMPOSITION
+                    </h2>
+                    <div class="text-base sm:text-lg text-[#C7B59D] font-medium tracking-wide">
+                        Tarif sur devis
+                    </div>
+                </div>
                 <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
                     Création musicale sur mesure, avec un parc de matériel analogique vintage permettant d'apporter chaleur, caractère et authenticité à vos productions.
                 </p>
@@ -167,7 +189,7 @@
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group shrink-0">
                 <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop" 
                      alt="Console de mixage analogique" 
                      class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
@@ -177,11 +199,16 @@
 
         <!-- Service Card 3 -->
         <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
-            <div class="md:w-1/2 space-y-4">
-                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
-                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
-                    VIDÉO
-                </h2>
+            <div class="md:w-1/2 w-full space-y-4 min-w-0">
+                <div class="w-12 h-1 bg-[#2A838E] rounded-full mb-6"></div>
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-white leading-tight tracking-tight">
+                        VIDÉO
+                    </h2>
+                    <div class="text-base sm:text-lg text-[#C7B59D] font-medium tracking-wide">
+                        Tarif sur devis
+                    </div>
+                </div>
                 <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
                     Réalisation de clips et captation live, avec une approche visuelle soignée pour mettre en valeur votre projet artistique.
                 </p>
@@ -191,7 +218,7 @@
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group shrink-0">
                 <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1000&auto=format&fit=crop" 
                      alt="Captation vidéo studio" 
                      class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
@@ -201,11 +228,16 @@
 
         <!-- Service Card 4 -->
         <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 flex flex-col md:flex-row gap-8 items-center border border-white/5 hover:border-white/10 transition shadow-2xl">
-            <div class="md:w-1/2 space-y-4">
-                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
-                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
-                    3D
-                </h2>
+            <div class="md:w-1/2 w-full space-y-4 min-w-0">
+                <div class="w-12 h-1 bg-[#C7B59D] rounded-full mb-6"></div>
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                    <h2 class="font-heading font-bold text-2xl sm:text-3xl text-white leading-tight tracking-tight">
+                        3D
+                    </h2>
+                    <div class="text-base sm:text-lg text-[#C7B59D] font-medium tracking-wide">
+                        Tarif sur devis
+                    </div>
+                </div>
                 <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
                     Création de visuels et d'assets 3D sur mesure, pour enrichir vos projets avec une dimension esthétique unique.
                 </p>
@@ -215,7 +247,7 @@
                     </a>
                 </div>
             </div>
-            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group">
+            <div class="md:w-1/2 w-full h-64 sm:h-80 rounded-xl overflow-hidden relative group shrink-0">
                 <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop" 
                      alt="Enceintes studio audio 3D" 
                      class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
@@ -226,126 +258,285 @@
     </section>
 
     <!-- NOS RÉALISATIONS SECTION -->
-    <section id="realisations" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div class="mb-12">
-            <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
-            <div class="flex flex-col md:flex-row justify-between md:items-end gap-6">
-                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
-                    NOS RÉALISATIONS
-                </h2>
-                <p class="text-gray-300 max-w-md text-sm sm:text-base leading-relaxed">
-                    Hauteur Studio est un home studio intime et professionnel conçu pour libérer votre créativité. Équipé pour répondre aux exigences de la production musicale moderne et de l'image, c'est l'endroit idéal pour concrétiser vos idées, de la maquette au produit final.
-                </p>
+    <section id="realisations" class="py-10 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 border border-white/5 shadow-2xl space-y-10">
+            <div>
+                <div class="w-12 h-1 bg-gray-400 rounded-full mb-6"></div>
+                <div class="flex flex-col md:flex-row justify-between md:items-end gap-6">
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
+                        NOS RÉALISATIONS
+                    </h2>
+                    <p class="text-gray-300 max-w-md text-sm sm:text-base leading-relaxed">
+                        Hauteur Studio est un home studio intime et professionnel conçu pour libérer votre créativité. Équipé pour répondre aux exigences de la production musicale moderne et de l'image, c'est l'endroit idéal pour concrétiser vos idées, de la maquette au produit final.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <!-- Portfolio Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Portfolio Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- Item 1 -->
-            <div class="group cursor-pointer">
-                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
+            <!-- Item 1: eclipse feat elise - une larme sous la pluie - -->
+            <div class="portfolio-video-card group cursor-pointer"
+                 role="button"
+                 tabindex="0"
+                 id="video-card-1"
+                 data-video-id="rOfgyGQ_uGc"
+                 data-video-title="Eclipse feat Élise - Une larme sous la pluie">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3 aspect-video shadow-lg">
                     <!-- Title Banner Badge -->
-                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
-                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 via-black/40 to-transparent p-3 pointer-events-none">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-2.5 py-1 rounded text-xs font-heading font-bold text-white tracking-wider uppercase border border-white/10">
                             ECLIPSE FEAT. ÉLISE - UNE LARME SOUS LA PLUIE -
                         </span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop" 
-                         alt="Eclipse feat Elise" 
-                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Official YouTube Video Thumbnail -->
+                    <img src="https://img.youtube.com/vi/rOfgyGQ_uGc/hqdefault.jpg" 
+                         alt="Eclipse feat Élise - Une larme sous la pluie" 
+                         loading="lazy"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Hover Tint Overlay -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300 pointer-events-none"></div>
+
+                    <!-- Centered Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-14 h-14 rounded-full bg-black/70 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#BA2B23] group-hover:border-[#BA2B23] transition-all duration-300">
+                            <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-400">Enregistrement Live, Mixage, Mastering</p>
+                <div class="flex items-center justify-between text-xs text-gray-400">
+                    <span>Enregistrement Live, Mixage, Mastering</span>
+                    <span class="text-[#C7B59D] group-hover:text-white flex items-center gap-1 font-medium transition">
+                        Voir la vidéo
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                </div>
             </div>
 
-            <!-- Item 2 -->
-            <div class="group cursor-pointer">
-                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
-                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
-                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+            <!-- Item 2: M4tias - Iron man -->
+            <div class="portfolio-video-card group cursor-pointer"
+                 role="button"
+                 tabindex="0"
+                 id="video-card-2"
+                 data-video-id="TsY8dBvJs6M"
+                 data-video-title="M4tias - Iron man">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3 aspect-video shadow-lg">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 via-black/40 to-transparent p-3 pointer-events-none">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-2.5 py-1 rounded text-xs font-heading font-bold text-white tracking-wider uppercase border border-white/10">
                             M4TIAS - IRON MAN
                         </span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" 
-                         alt="M4tias Iron Man 3D" 
-                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Official YouTube Video Thumbnail -->
+                    <img src="https://img.youtube.com/vi/TsY8dBvJs6M/hqdefault.jpg" 
+                         alt="M4tias - Iron man" 
+                         loading="lazy"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Hover Tint Overlay -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300 pointer-events-none"></div>
+
+                    <!-- Centered Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-14 h-14 rounded-full bg-black/70 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#BA2B23] group-hover:border-[#BA2B23] transition-all duration-300">
+                            <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-400">Composition, Enregistrement, Mixage, Mastering, Réalisation du clip en 3D</p>
+                <div class="flex items-center justify-between text-xs text-gray-400">
+                    <span>Composition, Enregistrement, Mixage, Mastering, 3D</span>
+                    <span class="text-[#C7B59D] group-hover:text-white flex items-center gap-1 font-medium transition">
+                        Voir la vidéo
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                </div>
             </div>
 
-            <!-- Item 3 -->
-            <div class="group cursor-pointer">
-                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
-                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
-                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+            <!-- Item 3: zen - vivre -->
+            <div class="portfolio-video-card group cursor-pointer"
+                 role="button"
+                 tabindex="0"
+                 id="video-card-3"
+                 data-video-id="cViEQ6TaiBw"
+                 data-video-title="zen - vivre">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3 aspect-video shadow-lg">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 via-black/40 to-transparent p-3 pointer-events-none">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-2.5 py-1 rounded text-xs font-heading font-bold text-white tracking-wider uppercase border border-white/10">
                             ZEN - VIVRE
                         </span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=800&auto=format&fit=crop" 
-                         alt="Zen Vivre" 
-                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Official YouTube Video Thumbnail -->
+                    <img src="https://img.youtube.com/vi/cViEQ6TaiBw/hqdefault.jpg" 
+                         alt="zen - vivre" 
+                         loading="lazy"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Hover Tint Overlay -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300 pointer-events-none"></div>
+
+                    <!-- Centered Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-14 h-14 rounded-full bg-black/70 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#BA2B23] group-hover:border-[#BA2B23] transition-all duration-300">
+                            <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-400">Réalisation Clip</p>
+                <div class="flex items-center justify-between text-xs text-gray-400">
+                    <span>Réalisation Clip</span>
+                    <span class="text-[#C7B59D] group-hover:text-white flex items-center gap-1 font-medium transition">
+                        Voir la vidéo
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                </div>
             </div>
 
-            <!-- Item 4 -->
-            <div class="group cursor-pointer">
-                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
-                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
-                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+            <!-- Item 4: marty de lutece - tout ce que j'ai pas -->
+            <div class="portfolio-video-card group cursor-pointer"
+                 role="button"
+                 tabindex="0"
+                 id="video-card-4"
+                 data-video-id="AfpVUhDk5TQ"
+                 data-video-title="marty de lutece - tout ce que j'ai pas">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3 aspect-video shadow-lg">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 via-black/40 to-transparent p-3 pointer-events-none">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-2.5 py-1 rounded text-xs font-heading font-bold text-white tracking-wider uppercase border border-white/10">
                             MARTY DE LUTECE - TOUT CE QUE J'AI PAS
                         </span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
-                         alt="Marty de Lutece" 
-                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Official YouTube Video Thumbnail -->
+                    <img src="https://img.youtube.com/vi/AfpVUhDk5TQ/hqdefault.jpg" 
+                         alt="marty de lutece - tout ce que j'ai pas" 
+                         loading="lazy"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Hover Tint Overlay -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300 pointer-events-none"></div>
+
+                    <!-- Centered Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-14 h-14 rounded-full bg-black/70 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#BA2B23] group-hover:border-[#BA2B23] transition-all duration-300">
+                            <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-400">Composition, Enregistrement, Mixage</p>
+                <div class="flex items-center justify-between text-xs text-gray-400">
+                    <span>Composition, Enregistrement, Mixage</span>
+                    <span class="text-[#C7B59D] group-hover:text-white flex items-center gap-1 font-medium transition">
+                        Voir la vidéo
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                </div>
             </div>
 
-            <!-- Item 5 -->
-            <div class="group cursor-pointer">
-                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
-                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
-                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+            <!-- Item 5: bourricot - Live session -->
+            <div class="portfolio-video-card group cursor-pointer"
+                 role="button"
+                 tabindex="0"
+                 id="video-card-5"
+                 data-video-id="BfQ8rA93vVs"
+                 data-video-title="bourricot - Live session">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3 aspect-video shadow-lg">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 via-black/40 to-transparent p-3 pointer-events-none">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-2.5 py-1 rounded text-xs font-heading font-bold text-white tracking-wider uppercase border border-white/10">
                             BOURRICOT - LIVE SESSION
                         </span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop" 
-                         alt="Bourricot Live Session" 
-                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Official YouTube Video Thumbnail -->
+                    <img src="https://img.youtube.com/vi/BfQ8rA93vVs/hqdefault.jpg" 
+                         alt="bourricot - Live session" 
+                         loading="lazy"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Hover Tint Overlay -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300 pointer-events-none"></div>
+
+                    <!-- Centered Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-14 h-14 rounded-full bg-black/70 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#BA2B23] group-hover:border-[#BA2B23] transition-all duration-300">
+                            <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-400">Captation Live</p>
+                <div class="flex items-center justify-between text-xs text-gray-400">
+                    <span>Captation Live</span>
+                    <span class="text-[#C7B59D] group-hover:text-white flex items-center gap-1 font-medium transition">
+                        Voir la vidéo
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                </div>
             </div>
 
-            <!-- Item 6 -->
-            <div class="group cursor-pointer">
-                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3">
-                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 to-transparent p-3">
-                        <span class="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded-sm text-xs font-heading font-bold text-white tracking-wider uppercase">
+            <!-- Item 6: la krypte au mic #3 -->
+            <div class="portfolio-video-card group cursor-pointer"
+                 role="button"
+                 tabindex="0"
+                 id="video-card-6"
+                 data-video-id="5k5r9ECRxNM"
+                 data-video-title="la krypte au mic #3">
+                <div class="relative rounded-xl overflow-hidden bg-hauteur-card border border-white/5 mb-3 aspect-video shadow-lg">
+                    <div class="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/80 via-black/40 to-transparent p-3 pointer-events-none">
+                        <span class="inline-block bg-white/20 backdrop-blur-md px-2.5 py-1 rounded text-xs font-heading font-bold text-white tracking-wider uppercase border border-white/10">
                             LA KRYPTE AU MIC #3
                         </span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop" 
-                         alt="La Krypte au Mic" 
-                         class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Official YouTube Video Thumbnail -->
+                    <img src="https://img.youtube.com/vi/5k5r9ECRxNM/hqdefault.jpg" 
+                         alt="la krypte au mic #3" 
+                         loading="lazy"
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                    <!-- Hover Tint Overlay -->
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-300 pointer-events-none"></div>
+
+                    <!-- Centered Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-14 h-14 rounded-full bg-black/70 backdrop-blur-sm border border-white/30 flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:bg-[#BA2B23] group-hover:border-[#BA2B23] transition-all duration-300">
+                            <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xs text-gray-400">Captation Live</p>
+                <div class="flex items-center justify-between text-xs text-gray-400">
+                    <span>Captation Live, Mixage</span>
+                    <span class="text-[#C7B59D] group-hover:text-white flex items-center gap-1 font-medium transition">
+                        Voir la vidéo
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </span>
+                </div>
             </div>
 
+            </div>
         </div>
     </section>
 
     <!-- QUI SOMMES-NOUS? SECTION -->
-    <section id="about" class="py-20 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-            <div class="w-12 h-1 bg-gray-400 rounded-full mx-auto mb-6"></div>
-            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
-                QUI SOMMES-NOUS?
-            </h2>
-        </div>
+    <section id="about" class="py-10 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="bg-hauteur-card rounded-2xl p-6 sm:p-10 border border-white/5 shadow-2xl space-y-12">
+            <div class="text-center">
+                <div class="w-12 h-1 bg-gray-400 rounded-full mx-auto mb-6"></div>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight">
+                    QUI SOMMES-NOUS?
+                </h2>
+            </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             
             <!-- Left 2 Points -->
             <div class="space-y-12 text-center lg:text-right order-2 lg:order-1">
@@ -394,6 +585,7 @@
                 </div>
             </div>
 
+            </div>
         </div>
     </section>
 
@@ -402,10 +594,10 @@
         <div class="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <!-- Social Icons Pill -->
             <div class="flex justify-center space-x-3 mb-2">
-                <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white" aria-label="TikTok">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.31 1.56-1.28 2.55.02.82.42 1.61 1.08 2.1 1.03.79 2.52.82 3.59.07.71-.5 1.18-1.29 1.25-2.16.08-2.92.03-5.83.04-8.74 0-2.49.01-4.99-.01-7.48z"/></svg>
                 </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-white">
+                <a href="https://www.instagram.com/hauteur.studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram Hauteur Studio" class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#BA2B23] flex items-center justify-center transition text-white" id="contact-instagram-btn" title="Suivre Hauteur Studio sur Instagram">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
             </div>
@@ -419,48 +611,76 @@
             </p>
 
             <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-300 pt-2 font-medium">
-                <a href="mailto:info@example.com" class="flex items-center space-x-2 hover:text-white transition">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    <span>info@example.com</span>
+                <a href="mailto:hauteur.studio@gmail.com" class="flex items-center space-x-2 hover:text-white transition" title="Écrire à hauteur.studio@gmail.com">
+                    <svg class="w-4 h-4 text-[#BA2B23]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>hauteur.studio@gmail.com</span>
                 </a>
-                <a href="tel:5551234567" class="flex items-center space-x-2 hover:text-white transition">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                    <span>(555) 123-4567</span>
+                <a href="tel:+33652028084" id="phone-link-btn" class="flex items-center space-x-2 hover:text-white transition group relative" title="Appeler ou copier le numéro">
+                    <svg class="w-4 h-4 text-[#C7B59D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span id="phone-number-display">06.52.02.80.84</span>
+                    <span id="phone-copy-badge" class="hidden absolute -top-7 left-1/2 -translate-x-1/2 bg-black text-xs text-white px-2 py-0.5 rounded border border-white/20 whitespace-nowrap shadow-lg">Copié !</span>
                 </a>
             </div>
         </div>
 
         <!-- Form Card Container -->
         <div class="max-w-xl mx-auto bg-[#181818] rounded-2xl p-6 sm:p-10 border border-white/5 shadow-2xl">
-            <form id="contactForm" class="space-y-5">
+            <form id="contactForm" action="https://formsubmit.co/hauteur.studio@gmail.com" method="POST" class="space-y-5">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" id="form-subject-hidden" value="[Hauteur Studio] Nouveau message de contact">
+                <input type="text" name="_honey" style="display:none">
+
                 <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Nom</label>
-                    <input type="text" required placeholder="Jane Smith" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Nom / Artiste</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="Votre nom ou nom d'artiste" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#BA2B23] transition">
                 </div>
 
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Email</label>
-                    <input type="email" required placeholder="info@example.com" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition">
+                    <input type="email" id="contact-email" name="email" required placeholder="votre.email@exemple.com" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#BA2B23] transition">
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Sujet</label>
-                    <input type="text" required placeholder="Session enregistrement" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Sujet du projet</label>
+                    <input type="text" id="contact-subject" name="subject" required placeholder="Enregistrement, Mixage, Composition, Vidéo..." class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#BA2B23] transition">
                 </div>
 
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Message</label>
-                    <textarea rows="4" required placeholder="Écrivez votre message" class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition resize-none"></textarea>
+                    <textarea id="contact-message" name="message" rows="4" required placeholder="Décrivez vos besoins, délais ou questions..." class="w-full bg-[#222222] border border-transparent rounded-lg px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#BA2B23] transition resize-none"></textarea>
                 </div>
 
-                <button type="submit" class="w-full bg-white text-black font-semibold rounded-full py-3 hover:bg-gray-200 transition duration-300 shadow-md">
-                    Envoyer
+                <button type="submit" id="contact-submit-btn" class="w-full bg-white text-black font-semibold rounded-full py-3.5 hover:bg-gray-200 transition duration-300 shadow-md flex items-center justify-center space-x-2 disabled:opacity-50">
+                    <span id="submit-btn-text">Envoyer à hauteur.studio@gmail.com</span>
+                    <svg id="submit-btn-spinner" class="hidden animate-spin h-4 w-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
                 </button>
             </form>
 
             <!-- Success Feedback Toast -->
-            <div id="formFeedback" class="hidden mt-4 p-4 rounded-lg bg-green-900/40 border border-green-500 text-green-200 text-sm text-center">
-                Merci ! Votre message a bien été envoyé. Nous vous répondrons très rapidement.
+            <div id="formFeedbackSuccess" class="hidden mt-5 p-4 rounded-xl bg-emerald-950/70 border border-emerald-500/40 text-emerald-200 text-sm space-y-2 text-center animate-fade-in">
+                <div class="font-semibold flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Message envoyé avec succès !</span>
+                </div>
+                <p class="text-xs text-emerald-300/80">
+                    Votre demande a été transmise à <strong class="text-white">hauteur.studio@gmail.com</strong>. Nous vous répondrons très rapidement.
+                </p>
+            </div>
+
+            <!-- Error / Fallback Feedback Toast -->
+            <div id="formFeedbackError" class="hidden mt-5 p-4 rounded-xl bg-[#BA2B23]/20 border border-[#BA2B23]/40 text-rose-200 text-sm space-y-3 text-center">
+                <p class="text-xs">
+                    Une erreur s'est produite lors de l'envoi direct. Vous pouvez nous envoyer directement votre message par email :
+                </p>
+                <a id="fallback-mailto-btn" href="mailto:hauteur.studio@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#BA2B23] hover:bg-[#a1241d] text-white font-medium text-xs transition">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>Ouvrir dans ma messagerie</span>
+                </a>
             </div>
         </div>
     </section>
@@ -468,11 +688,17 @@
     <!-- FOOTER -->
     <footer class="bg-black py-12 px-6 border-t border-white/5">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-            <div>
-                <a href="#" class="font-heading font-extrabold text-xl tracking-wider text-white">
-                    HAUTEUR
-                </a>
-                <p class="text-xs text-gray-500 mt-2">© 2026 Hauteur Studio. Tous droits réservés.</p>
+            <div class="flex items-center space-x-3" id="brand-footer-logo">
+                <img src="https://raw.githubusercontent.com/hauteurstudio/hauteur.studio/main/image/Hauteur_Studio_transparent.png" 
+                     onerror="this.onerror=null;this.src='/image/Hauteur_Studio_transparent.png';" 
+                     alt="Hauteur Studio Logo" 
+                     class="w-9 h-9 object-contain">
+                <div>
+                    <a href="#" class="font-heading font-extrabold text-xl tracking-wider text-white hover:opacity-90 transition">
+                        HAUTEUR
+                    </a>
+                    <p class="text-xs text-gray-500 mt-1">© 2026 Hauteur Studio. Tous droits réservés.</p>
+                </div>
             </div>
 
             <div class="flex flex-wrap gap-12 text-xs">
@@ -489,13 +715,187 @@
                 <div>
                     <span class="block text-white font-semibold mb-3 uppercase tracking-wider">Socials</span>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+                        <li>
+                            <a href="https://www.instagram.com/hauteur.studio" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-1.5" id="footer-instagram-link">
+                                <span>Instagram</span>
+                                <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </li>
                         <li><a href="#" class="hover:text-white transition">TikTok</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- VIDEO MODAL / LIGHTBOX -->
+    <div id="video-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="modal-video-title">
+        <div class="relative w-full max-w-4xl bg-[#141414] rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex flex-col">
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-black/50 border-b border-white/10">
+                <div class="flex items-center space-x-3 overflow-hidden pr-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#BA2B23] animate-pulse shrink-0"></span>
+                    <h3 id="modal-video-title" class="font-heading font-bold text-xs sm:text-sm md:text-base text-white truncate">
+                        Titre de la vidéo
+                    </h3>
+                </div>
+                <div class="flex items-center space-x-2 shrink-0">
+                    <a id="modal-youtube-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-[#BA2B23] text-xs font-medium text-white transition duration-200">
+                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <span>Ouvrir sur YouTube</span>
+                    </a>
+                    <button id="close-video-modal" aria-label="Fermer la vidéo" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white flex items-center justify-center transition focus:outline-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal Video Player Container (16:9 Responsive) -->
+            <div class="relative w-full aspect-video bg-black">
+                <iframe id="video-modal-iframe" 
+                        class="w-full h-full" 
+                        src="" 
+                        title="Lecteur vidéo Hauteur Studio" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+            </div>
+
+            <!-- Modal Mobile Footer Link -->
+            <div class="sm:hidden px-4 py-2.5 bg-black/60 border-t border-white/10 flex justify-between items-center text-xs">
+                <span class="text-gray-400">Hauteur Studio</span>
+                <a id="modal-youtube-link-mobile" href="#" target="_blank" rel="noopener noreferrer" class="text-[#BA2B23] hover:underline font-semibold flex items-center gap-1">
+                    <span>Voir sur YouTube</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARIFS MODAL (Enregistrement / Mixage / Mastering) -->
+    <div id="tarifs-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="tarifs-modal-title">
+        <div class="relative w-full max-w-lg bg-[#181818] rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex flex-col animate-fade-in text-white" id="tarifs-modal-card">
+            
+            <!-- Modal Header -->
+            <div class="flex items-center justify-between px-6 py-5 bg-black/50 border-b border-white/10">
+                <div class="flex items-center space-x-3">
+                    <div class="w-2 h-7 bg-[#BA2B23] rounded-full"></div>
+                    <div>
+                        <h3 id="tarifs-modal-title" class="font-heading font-extrabold text-lg sm:text-xl text-white tracking-wide uppercase">
+                            TARIFS STUDIO
+                        </h3>
+                        <p class="text-xs text-gray-400">Enregistrement · Mixage · Mastering</p>
+                    </div>
+                </div>
+                <button id="close-tarifs-modal" aria-label="Fermer la fenêtre des tarifs" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white flex items-center justify-center transition focus:outline-none cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 sm:p-7 space-y-6 max-h-[75vh] overflow-y-auto">
+                
+                <!-- Category 1: Enregistrement -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between pb-1 border-b border-white/10">
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#BA2B23]">
+                            ENREGISTREMENT
+                        </span>
+                        <span class="text-[11px] text-gray-400">Prise de son Voix/Instruments</span>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <div class="flex justify-between items-center bg-[#222222] px-4 py-3 rounded-xl border border-white/5 hover:border-white/15 transition">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-2 h-2 rounded-full bg-[#BA2B23]"></span>
+                                <span class="text-sm font-medium text-gray-200">2h d'enregistrement</span>
+                            </div>
+                            <span class="text-base font-bold text-white font-mono">60€</span>
+                        </div>
+
+                        <div class="flex justify-between items-center bg-[#222222] px-4 py-3 rounded-xl border border-white/5 hover:border-white/15 transition">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-2 h-2 rounded-full bg-[#BA2B23]"></span>
+                                <span class="text-sm font-medium text-gray-200">3h d'enregistrement</span>
+                            </div>
+                            <span class="text-base font-bold text-white font-mono">80€</span>
+                        </div>
+
+                        <div class="flex justify-between items-center bg-[#222222] px-4 py-3 rounded-xl border border-white/5 hover:border-white/15 transition">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-2 h-2 rounded-full bg-[#BA2B23]"></span>
+                                <span class="text-sm font-medium text-gray-200">4h d'enregistrement</span>
+                            </div>
+                            <span class="text-base font-bold text-white font-mono">100€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formule Complète Spéciale -->
+                <div class="p-4 rounded-xl bg-gradient-to-r from-[#BA2B23]/25 via-[#BA2B23]/10 to-transparent border border-[#BA2B23]/50 relative overflow-hidden shadow-lg">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div>
+                            <span class="inline-block text-[10px] uppercase font-extrabold tracking-widest px-2.5 py-0.5 rounded-full bg-[#BA2B23] text-white mb-1.5 shadow">
+                                Formule Recommandée
+                            </span>
+                            <h4 class="text-sm sm:text-base font-bold text-white">Enregistrement 2h + Mix + mastering</h4>
+                            <p class="text-xs text-gray-300 mt-0.5">Session studio complète : prise voix, mixage approfondi et master final.</p>
+                        </div>
+                        <div class="text-left sm:text-right shrink-0">
+                            <div class="text-2xl font-extrabold text-white font-mono tracking-tight">120€</div>
+                            <div class="text-[10px] text-gray-300 uppercase tracking-wider">tout compris</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Terms Notice (sous la formule recommandée) -->
+                <div>
+                    <p class="text-[11px] sm:text-xs text-gray-400 bg-white/[0.03] p-3 rounded-xl border border-white/5 flex items-center space-x-2.5">
+                        <svg class="w-4 h-4 text-[#BA2B23] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>Le paiement se fait en début de session.</span>
+                    </p>
+                </div>
+
+                <!-- Category 2: Mixage / Mastering -->
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between pb-1 border-b border-white/10">
+                        <span class="text-xs font-bold uppercase tracking-widest text-[#C7B59D]">
+                            MIXAGE / MASTERING
+                        </span>
+                        <span class="text-[11px] text-gray-400">Post-production audio</span>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <div class="flex justify-between items-center bg-[#222222] px-4 py-3 rounded-xl border border-white/5 hover:border-white/15 transition">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-2 h-2 rounded-full bg-[#8C7733]"></span>
+                                <span class="text-sm font-medium text-gray-200">Mixage audio</span>
+                            </div>
+                            <span class="text-base font-bold text-white font-mono">50€</span>
+                        </div>
+
+                        <div class="flex justify-between items-center bg-[#222222] px-4 py-3 rounded-xl border border-white/5 hover:border-white/15 transition">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-2 h-2 rounded-full bg-[#A855F7]"></span>
+                                <span class="text-sm font-medium text-gray-200">Mastering</span>
+                            </div>
+                            <span class="text-base font-bold text-white font-mono">60€</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer CTA -->
+            <div class="px-6 py-4 bg-black/60 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
+                <span class="text-xs text-gray-400">Besoin d'un devis sur-mesure ?</span>
+                <a href="#contact" id="tarifs-contact-btn" class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-gray-200 transition text-center shadow cursor-pointer">
+                    Réserver / Nous contacter
+                </a>
+            </div>
+
+        </div>
+    </div>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
@@ -504,28 +904,242 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // YouTube Video Lightbox Modal Logic
+        const videoModal = document.getElementById('video-modal');
+        const videoIframe = document.getElementById('video-modal-iframe');
+        const modalTitle = document.getElementById('modal-video-title');
+        const modalYoutubeLink = document.getElementById('modal-youtube-link');
+        const modalYoutubeLinkMobile = document.getElementById('modal-youtube-link-mobile');
+        const closeVideoBtn = document.getElementById('close-video-modal');
+        const videoCards = document.querySelectorAll('.portfolio-video-card');
+
+        function openVideoModal(videoId, title) {
+            if (!videoId || !videoModal || !videoIframe) return;
+            
+            if (modalTitle) modalTitle.textContent = title || 'Hauteur Studio';
+            const ytUrl = `https://youtu.be/${videoId}`;
+            if (modalYoutubeLink) modalYoutubeLink.href = ytUrl;
+            if (modalYoutubeLinkMobile) modalYoutubeLinkMobile.href = ytUrl;
+            
+            // Set autoplay URL
+            videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+            
+            videoModal.classList.remove('hidden');
+            // Trigger animation frame for fade-in
+            requestAnimationFrame(() => {
+                videoModal.classList.remove('opacity-0');
+                videoModal.classList.add('opacity-100');
+            });
+            document.body.classList.add('overflow-hidden');
+            if (closeVideoBtn) closeVideoBtn.focus();
+        }
+
+        function closeVideoModal() {
+            if (!videoModal || !videoIframe) return;
+            videoModal.classList.remove('opacity-100');
+            videoModal.classList.add('opacity-0');
+            setTimeout(() => {
+                videoModal.classList.add('hidden');
+                // Clearing src stops audio and video playback immediately
+                videoIframe.src = '';
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
+        }
+
+        videoCards.forEach(card => {
+            const videoId = card.getAttribute('data-video-id');
+            const title = card.getAttribute('data-video-title');
+            
+            card.addEventListener('click', () => {
+                openVideoModal(videoId, title);
+            });
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openVideoModal(videoId, title);
+                }
             });
         });
 
-        // Contact Form Handling Simulation
-        const contactForm = document.getElementById('contactForm');
-        const formFeedback = document.getElementById('formFeedback');
+        if (closeVideoBtn) {
+            closeVideoBtn.addEventListener('click', closeVideoModal);
+        }
 
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formFeedback.classList.remove('hidden');
-            contactForm.reset();
+        if (videoModal) {
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    closeVideoModal();
+                }
+            });
+        }
+
+        // Tarifs Modal Logic
+        const openTarifsBtn = document.getElementById('open-tarifs-btn');
+        const tarifsModal = document.getElementById('tarifs-modal');
+        const closeTarifsBtn = document.getElementById('close-tarifs-modal');
+        const tarifsContactBtn = document.getElementById('tarifs-contact-btn');
+
+        function openTarifsModal() {
+            if (!tarifsModal) return;
+            tarifsModal.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                tarifsModal.classList.remove('opacity-0');
+                tarifsModal.classList.add('opacity-100');
+            });
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeTarifsModal() {
+            if (!tarifsModal) return;
+            tarifsModal.classList.remove('opacity-100');
+            tarifsModal.classList.add('opacity-0');
             setTimeout(() => {
-                formFeedback.classList.add('hidden');
-            }, 6000);
+                tarifsModal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
+        }
+
+        if (openTarifsBtn) {
+            openTarifsBtn.addEventListener('click', openTarifsModal);
+        }
+        if (closeTarifsBtn) {
+            closeTarifsBtn.addEventListener('click', closeTarifsModal);
+        }
+        if (tarifsContactBtn) {
+            tarifsContactBtn.addEventListener('click', () => {
+                closeTarifsModal();
+            });
+        }
+        if (tarifsModal) {
+            tarifsModal.addEventListener('click', (e) => {
+                if (e.target === tarifsModal) {
+                    closeTarifsModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (videoModal && !videoModal.classList.contains('hidden')) {
+                    closeVideoModal();
+                }
+                if (tarifsModal && !tarifsModal.classList.contains('hidden')) {
+                    closeTarifsModal();
+                }
+            }
         });
+
+        // Phone number click/copy handler
+        const phoneLinkBtn = document.getElementById('phone-link-btn');
+        const phoneCopyBadge = document.getElementById('phone-copy-badge');
+        
+        if (phoneLinkBtn && phoneCopyBadge) {
+            phoneLinkBtn.addEventListener('click', (e) => {
+                // Check if user is on mobile/touch device
+                const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+                if (!isTouchDevice) {
+                    // On desktop, copy number to clipboard to avoid weird protocol popup
+                    e.preventDefault();
+                    navigator.clipboard.writeText('0652028084').then(() => {
+                        phoneCopyBadge.classList.remove('hidden');
+                        setTimeout(() => {
+                            phoneCopyBadge.classList.add('hidden');
+                        }, 2200);
+                    }).catch(() => {
+                        // If clipboard permission is blocked, fallback to normal link behavior
+                        window.location.href = 'tel:+33652028084';
+                    });
+                }
+                // On mobile devices, default behavior (dialing 06 52 02 80 84) proceeds naturally
+            });
+        }
+
+        // Contact Form Handling (Submissions sent to hauteur.studio@gmail.com)
+        const contactForm = document.getElementById('contactForm');
+        const formFeedbackSuccess = document.getElementById('formFeedbackSuccess');
+        const formFeedbackError = document.getElementById('formFeedbackError');
+        const fallbackMailtoBtn = document.getElementById('fallback-mailto-btn');
+        const submitBtn = document.getElementById('contact-submit-btn');
+        const submitBtnText = document.getElementById('submit-btn-text');
+        const submitSpinner = document.getElementById('submit-btn-spinner');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const nameInput = document.getElementById('contact-name');
+                const emailInput = document.getElementById('contact-email');
+                const subjectInput = document.getElementById('contact-subject');
+                const messageInput = document.getElementById('contact-message');
+
+                const name = nameInput ? nameInput.value.trim() : '';
+                const email = emailInput ? emailInput.value.trim() : '';
+                const subject = subjectInput ? subjectInput.value.trim() : 'Demande d\'information';
+                const message = messageInput ? messageInput.value.trim() : '';
+
+                // UI loading state
+                if (submitBtn) submitBtn.disabled = true;
+                if (submitBtnText) submitBtnText.textContent = 'Envoi en cours...';
+                if (submitSpinner) submitSpinner.classList.remove('hidden');
+                if (formFeedbackSuccess) formFeedbackSuccess.classList.add('hidden');
+                if (formFeedbackError) formFeedbackError.classList.add('hidden');
+
+                // Prepare prefilled mailto URL for fallback
+                const mailtoSubject = encodeURIComponent(`[Hauteur Studio] ${subject} - ${name}`);
+                const mailtoBody = encodeURIComponent(`Bonjour Hauteur Studio,\n\n${message}\n\nDe la part de: ${name} (${email})`);
+                if (fallbackMailtoBtn) {
+                    fallbackMailtoBtn.href = `mailto:hauteur.studio@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+                }
+
+                try {
+                    const response = await fetch('https://formsubmit.co/ajax/hauteur.studio@gmail.com', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            _subject: `[Hauteur Studio] ${subject} (${name})`,
+                            message: message,
+                            _template: 'table'
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok || data.success === 'true' || data.success === true) {
+                        if (formFeedbackSuccess) formFeedbackSuccess.classList.remove('hidden');
+                        contactForm.reset();
+                    } else {
+                        throw new Error(data.message || 'Erreur lors de la transmission');
+                    }
+                } catch (err) {
+                    console.warn('FormSubmit endpoint notice:', err);
+                    // Open directly via mailto or show friendly fallback
+                    if (formFeedbackError) {
+                        formFeedbackError.classList.remove('hidden');
+                    }
+                } finally {
+                    if (submitBtn) submitBtn.disabled = false;
+                    if (submitBtnText) submitBtnText.textContent = 'Envoyer à hauteur.studio@gmail.com';
+                    if (submitSpinner) submitSpinner.classList.add('hidden');
+                }
+            });
+        }
     </script>
 </body>
 </html>
