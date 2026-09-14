@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap');
+      .logo-title {
+        font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 700;
+        font-size: 144px;
+        fill: #C7B59D;
+        letter-spacing: -1px;
+      }
+      .logo-subtitle {
+        font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 600;
+        font-size: 34px;
+        fill: #C7B59D;
+        letter-spacing: 0.52em;
+      }
+    </style>
+  </defs>
+
+  <!-- Sun Circle (behind red ribbon) -->
+  <circle cx="286" cy="336" r="112" fill="#C7B59D" />
+
+  <!-- Ribbon 1: Vermilion Red -->
+  <path d="M 150,648 L 150,596 C 150,378 426,378 426,160 L 426,108 L 566,108 L 566,160 C 566,378 290,378 290,596 L 290,648 Z" fill="#BA2B23" />
+
+  <!-- Ribbon 2: Brass Olive Gold -->
+  <path d="M 308,648 L 308,596 C 308,378 584,378 584,160 L 584,108 L 724,108 L 724,160 C 724,378 448,378 448,596 L 448,648 Z" fill="#8C7733" />
+
+  <!-- Ribbon 3: Vintage Petrol Teal -->
+  <path d="M 466,648 L 466,596 C 466,378 742,378 742,160 L 742,108 L 882,108 L 882,160 C 882,378 606,378 606,596 L 606,648 Z" fill="#2A838E" />
+
+  <!-- Typography: Hauteur -->
+  <text x="495" y="828" text-anchor="middle" class="logo-title">Hauteur</text>
+
+  <!-- Typography: S T U D I O -->
+  <text x="508" y="902" text-anchor="middle" class="logo-subtitle">STUDIO</text>
+</svg>

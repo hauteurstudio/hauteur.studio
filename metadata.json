@@ -1,0 +1,8 @@
+{
+  "name": "HAUTEUR STUDIO",
+  "description": "Studio de production musicale, ingénierie sonore, création visuelle & réalisations 3D sur mesure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
